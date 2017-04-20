@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="User Devices Temp" max_length="40" name="x_kasp_forescout_user_devices_temp" type="collection">
+        <element label="Devices JSON" max_length="4000" name="devices_json" type="string"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

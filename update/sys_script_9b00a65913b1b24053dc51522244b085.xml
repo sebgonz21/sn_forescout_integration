@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_kasp_forescout_events</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Get User Devices</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	if(current.getValue('user') == ''){
+		return;
+	}
+	
+	var properties = new GlideRecord('x_kasp_forescout_properties');
+	properties.get('6e4ca2d913f1b24053dc51522244b055');
+	
+	var baseUrl = properties.getValue('base_url');
+	var token = properties.getValue('integration_token');
+	
+	var sendRequest = function(requestType,endpoint,headers){
+		
+		try{
+			
+			var rest = new sn_ws.RESTMessageV2();
+			rest.setHttpMethod(requestType);
+			rest.setMIDServer("ProdMidServer2");
+			rest.setEndpoint(endpoint);
+			rest.setHttpTimeout(10000);
+			
+			
+			if(headers){
+				for(var header in headers){
+					rest.setRequestHeader(header,headers[header]);
+				}
+				
+			}
+			
+			var response = rest.execute();
+			
+			return response.getBody();
+			
+		}catch(exception){
+			
+			gs.info("FRSCT >>>ERROR Sending "+requestType+" request to "+endpoint);
+			return null;
+			
+		}
+	};
+	
+	var headers = {
+		"Accept":"application/json",
+		"Authorization":token
+	};
+	
+	var endpoint = baseUrl +'hosts?user=' + current.getValue('user');
+	
+	var res = sendRequest("get",endpoint,headers);
+	
+	current.setValue('response',res);
+	current.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>sebgar01</sys_created_by>
+        <sys_created_on>2017-03-28 14:55:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>9b00a65913b1b24053dc51522244b085</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Get User Devices</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+        <sys_update_name>sys_script_9b00a65913b1b24053dc51522244b085</sys_update_name>
+        <sys_updated_by>sebgar01</sys_updated_by>
+        <sys_updated_on>2017-03-29 14:22:55</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+</record_update>

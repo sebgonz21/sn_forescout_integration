@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Asset Integration</name>
+        <run_as display_value="Sebastian Gonzalez-Garcia">96e7c5caf58e0100649946d7569884b1</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-03-31 18:52:04</run_start>
+        <run_time>1970-01-01 05:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[(function(){
+	
+	var properties = new GlideRecord('x_kasp_forescout_properties');
+	properties.get('6e4ca2d913f1b24053dc51522244b055');
+	
+	var baseUrl = properties.getValue('base_url');
+	var hostsURL = properties.getValue('hosts_url');
+	
+	var token = properties.getValue('integration_token');
+	
+	var user = new GlideRecord('sys_user');
+	/* TEST QUERY*/
+	user.addQuery('user_name','aksmal01')
+		.addOrCondition('user_name','diaram01')
+		.addOrCondition('user_name','dipsha01')
+		.addOrCondition('user_name','eliabr01')
+		.addOrCondition('user_name','sebgar01');
+	
+	/* TEST QUERY*/
+	
+	/* Real QUERY
+	user.addQuery('active',true);
+	user.addQuery('source','CONTAINS','OU=North Bergen')
+		.addOrCondition('source','CONTAINS','OU=New York');
+	*/
+	var asset;
+	
+	user.query();
+	var event;
+	while(user.next()){
+		event = new GlideRecord('x_kasp_forescout_events');
+		event.setValue('user',user.getValue('user_name'));
+		event.insert();
+	}
+	
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>sebgar01</sys_created_by>
+        <sys_created_on>2017-03-31 18:58:18</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2a85729e13f1b64053dc51522244b0bf</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Asset Integration</sys_name>
+        <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+        <sys_update_name>sysauto_script_2a85729e13f1b64053dc51522244b0bf</sys_update_name>
+        <sys_updated_by>sebgar01</sys_updated_by>
+        <sys_updated_on>2017-03-31 20:13:45</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Forescout Integration</name>
+        <order>100</order>
+        <roles>x_kasp_forescout_events_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>sebgar01</sys_created_by>
+        <sys_created_on>2017-03-28 14:43:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>54ff925913b1b24053dc51522244b08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Forescout Integration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+        <sys_update_name>sys_app_application_54ff925913b1b24053dc51522244b08f</sys_update_name>
+        <sys_updated_by>sebgar01</sys_updated_by>
+        <sys_updated_on>2017-03-28 14:43:46</sys_updated_on>
+        <title>Forescout Integration</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

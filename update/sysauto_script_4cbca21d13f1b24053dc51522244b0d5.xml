@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Get Security Token</name>
+        <run_as display_value="Sebastian Gonzalez-Garcia">96e7c5caf58e0100649946d7569884b1</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 00:04:50</run_period>
+        <run_start>2017-03-28 16:04:00</run_start>
+        <run_time>1970-01-01 05:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[(function(){
+	
+	var propertiesRecord = new GlideRecord('x_kasp_forescout_properties');
+	propertiesRecord.get('6e4ca2d913f1b24053dc51522244b055');
+	var loginURL = propertiesRecord.getValue('integration_token_url');	
+	
+	var sendRequest = function(requestType,endpoint,headers){
+		
+		try{
+			
+			var rest = new sn_ws.RESTMessageV2();
+			rest.setHttpMethod(requestType);
+			rest.setMIDServer("ProdMidServer2");
+			rest.setEndpoint(endpoint);
+			rest.setHttpTimeout(10000);
+			
+			if(headers){
+				for(var header in headers){
+					rest.setRequestHeader(header,headers[header]);
+				}
+				
+			}
+			
+			
+			var response = rest.execute();
+			response.waitForResponse(10);
+			
+			return response.getBody();
+			
+		}catch(exception){
+			
+			gs.info("FRSCT >>>ERROR Sending "+requestType+" request to "+endpoint);
+			return null;
+			
+		}
+	};
+	
+	var headers = {"Content-Type":"application/x-www-form-urlencoded"};
+
+	var token = sendRequest("post",loginURL,headers);
+	
+	propertiesRecord.setValue('integration_token',token);
+	propertiesRecord.update();
+	
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>sebgar01</sys_created_by>
+        <sys_created_on>2017-03-28 15:41:28</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4cbca21d13f1b24053dc51522244b0d5</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Get Security Token</sys_name>
+        <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+        <sys_update_name>sysauto_script_4cbca21d13f1b24053dc51522244b0d5</sys_update_name>
+        <sys_updated_by>sebgar01</sys_updated_by>
+        <sys_updated_on>2017-03-28 16:03:42</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

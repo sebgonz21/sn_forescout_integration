@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_kasp_forescout_events" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_kasp_forescout_events" element="NULL" name="x_kasp_forescout_events" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">cba26a1d13b1b24053dc51522244b020</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-28 14:55:42</sys_created_on>
+            <sys_id>03a26a1d13b1b24053dc51522244b021</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-28 14:55:42</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_kasp_forescout_events</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-28 14:55:42</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>cba26a1d13b1b24053dc51522244b020</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_kasp_forescout_events</sys_name>
+            <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+            <sys_update_name>sys_ui_list_x_kasp_forescout_events_null</sys_update_name>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-28 14:55:42</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

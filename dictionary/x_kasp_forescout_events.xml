@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Events" max_length="40" name="x_kasp_forescout_events" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Host" max_length="100" name="host" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Response" max_length="4000" name="response" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Response Overflow" max_length="4000" name="response_overflow" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="User" max_length="40" name="user" type="string"/>
+    </element>
+</database>

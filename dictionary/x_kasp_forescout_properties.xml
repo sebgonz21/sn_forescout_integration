@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Properties" max_length="40" name="x_kasp_forescout_properties" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Base URL" max_length="100" name="base_url" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Details Field String" max_length="4000" name="details_field_string" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Fields URL" max_length="100" name="fields_url" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Hosts URL" max_length="100" name="hosts_url" type="string"/>
+        <element label="Integration Token" max_length="4000" name="integration_token" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Integration Token URL" max_length="1000" name="integration_token_url" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Login URL" max_length="100" name="login_url" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Password" max_length="100" name="password" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Username" max_length="100" name="username" type="string"/>
+    </element>
+</database>

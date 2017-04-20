@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
+
+var forescout = angular.module('forescout',[]);
+
+forescout.controller("ctrl",['$http','$scope','$interval',function($http,$scope,$interval){
+	
+	$scope.hostsloaded = true;
+	
+	$scope.user = "";
+	
+	$scope.record = '';
+	
+	$scope.hostsIps = [];
+	
+	$scope.hostDetails = null;
+	
+	$scope.inter = {};
+	
+	$scope.getDevices = function(){
+		$scope.hostsIps = [];
+		$scope.hostsloaded = false;
+		$http({
+			url:'/api/now/table/x_kasp_forescout_events',
+			method:"POST",
+			headers:{
+				'X-UserToken': window.g_ck.toString(),
+				'Accept':'application/json',
+				'Content-Type':'application/json',
+			},
+			data:{
+				user:$scope.user 
+			}
+		}).success(function(data,status){
+			$scope.record = data.result.sys_id;
+			$scope.inter = $interval($scope.getResponse,2000);
+			console.log("Created Event");
+			
+		}).error(function(data,status){
+			console.log("ERROR");
+		});
+		
+	};
+	
+	$scope.getResponse = function(){
+		
+		$http({
+			url:'/api/now/table/x_kasp_forescout_events?sys_id='+$scope.record,
+			method:"GET",
+			headers:{
+				'X-UserToken': window.g_ck.toString(),
+				'Accept':'application/json',
+				'Content-Type':'application/json',
+			}
+		}).success(function(data,status){
+			
+			console.log("Waiting for response");
+			
+			if(data.result[0].response != ''){
+				$scope.hostsloaded = true;
+				console.log("Got Response!");
+				$interval.cancel($scope.inter);
+				
+				var hosts = JSON.parse(data.result[0].response).hosts;
+				var hostDetails = JSON.parse(data.result[0].response).host;
+				
+				if(hosts){
+					for(var i = 0; i < hosts.length; i++){
+						$scope.hostsIps.push(hosts[i]);
+					}
+				}
+				
+				if(hostDetails){
+					$scope.hostDetails = hostDetails;
+				}
+				
+				
+			}
+			//console.log(data.result);
+			
+		}).error(function(data,status){
+			console.log("ERROR");
+		});
+		
+	};
+	
+	$scope.getDeviceDetails = function(ip){
+		console.log("Getting details for " + ip);
+		$scope.hostsloaded = false;
+		$http({
+			url:'/api/now/table/x_kasp_forescout_events',
+			method:"POST",
+			headers:{
+				'X-UserToken': window.g_ck.toString(),
+				'Accept':'application/json',
+				'Content-Type':'application/json',
+			},
+			data:{
+				host:ip
+			}
+		}).success(function(data,status){
+			$scope.record = data.result.sys_id;
+			$scope.inter = $interval($scope.getResponse,2000);
+			console.log("Created Event");
+			
+		}).error(function(data,status){
+			console.log("ERROR");
+		});
+		
+	};
+	
+}]);]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_kasp_forescout_test_get_user_devices.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	
+	
+	<body ng-app="forescout" ng-controller="ctrl">
+		<div class="col-lg-6 col-md-6 col-sm-6">
+
+			<input ng-model="user" class="form-control"  value="{{user}}" placeholder="enter"/>
+
+			<button ng-click="getDevices()">Get Devices</button>
+			
+			<img ng-show='!hostsloaded' src="loading.gif" width="32" height="32"/>
+			
+			<div ng-repeat="host in hostsIps">
+				----------------------
+				<div>
+					<p>HOST ID: {{host.hostId}}</p>
+					<p>IP: {{host.ip}}</p>
+					<p>MAC: {{host.mac}}</p>
+					<button class="btn btn-md-default" ng-click="getDeviceDetails(host.ip)">Get Device Details</button>
+				</div>
+				----------------------
+			</div>
+			
+			<div ng-show="hostDetails != null">
+				<p>HOST NAME: {{hostDetails.fields.hostname.value}}</p>
+				<p>HOST ID: {{hostDetails.id}}</p>
+				<p>IP: {{hostDetails.ip}}</p>
+				<p>MAC: {{hostDetails.mac}}</p>
+				<p>USER: {{hostDetails.fields.user.value}}</p>
+				<p>OS: {{hostDetails.fields.va_os_comp.value.parent}} {{hostDetails.fields.va_os_comp.value.flavor}}</p>
+				
+			</div>
+		</div>
+	</body>
+</j:jelly>]]></html>
+        <name>test_get_user_devices</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>sebgar01</sys_created_by>
+        <sys_created_on>2017-03-28 16:20:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>b0e5725d1335b24053dc51522244b07a</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>test_get_user_devices</sys_name>
+        <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+        <sys_update_name>sys_ui_page_b0e5725d1335b24053dc51522244b07a</sys_update_name>
+        <sys_updated_by>sebgar01</sys_updated_by>
+        <sys_updated_on>2017-04-05 15:24:10</sys_updated_on>
+    </sys_ui_page>
+</record_update>

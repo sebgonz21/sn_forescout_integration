@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="details_field_string" label="Details Field String" language="en" table="x_kasp_forescout_properties">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>details_field_string</element>
+            <help/>
+            <hint/>
+            <label>Details Field String</label>
+            <language>en</language>
+            <name>x_kasp_forescout_properties</name>
+            <plural>Details Field Strings</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:53:40</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>45a3879e1335b64053dc51522244b09c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Details Field String</sys_name>
+            <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+            <sys_update_name>sys_documentation_x_kasp_forescout_properties_details_field_string_en</sys_update_name>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:53:40</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

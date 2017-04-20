@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="cb2c26d913f1b24053dc51522244b08b" sys_domain="global" table="x_kasp_forescout_properties" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_updated_on</element>
+            <position>0</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>f6048b9e1335b64053dc51522244b0a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>base_url</element>
+            <position>1</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>7a048b9e1335b64053dc51522244b0a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>username</element>
+            <position>2</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>fa048b9e1335b64053dc51522244b0a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>password</element>
+            <position>3</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>7e048b9e1335b64053dc51522244b0a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>login_url</element>
+            <position>4</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>fe048b9e1335b64053dc51522244b0a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hosts_url</element>
+            <position>5</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>72048b9e1335b64053dc51522244b0a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fields_url</element>
+            <position>6</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>f2048b9e1335b64053dc51522244b0a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_token_url</element>
+            <position>7</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>76048b9e1335b64053dc51522244b0a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>integration_token</element>
+            <position>8</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>f6048b9e1335b64053dc51522244b0a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>details_field_string</element>
+            <position>9</position>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-31 19:55:26</sys_created_on>
+            <sys_id>7a048b9e1335b64053dc51522244b0a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_kasp_forescout_properties" sys_domain="global" view="Default view">cb2c26d913f1b24053dc51522244b08b</sys_ui_section>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-31 19:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_kasp_forescout_properties</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>sebgar01</sys_created_by>
+            <sys_created_on>2017-03-28 15:37:12</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>cb2c26d913f1b24053dc51522244b08b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_kasp_forescout_properties</sys_name>
+            <sys_overrides display_value="">global</sys_overrides>
+            <sys_package display_value="Forescout" source="x_kasp_forescout">db6f5ad513b1b24053dc51522244b0d3</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Forescout">db6f5ad513b1b24053dc51522244b0d3</sys_scope>
+            <sys_update_name>sys_ui_section_cb2c26d913f1b24053dc51522244b08b</sys_update_name>
+            <sys_updated_by>sebgar01</sys_updated_by>
+            <sys_updated_on>2017-03-28 15:37:12</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
